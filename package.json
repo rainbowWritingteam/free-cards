@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "deploy": "ng build --prod && firebase deploy",
-    "postinstall": "ng build --target=production -e ${NODE_ENV:-production} --aot"
+    "heroku-postbuild": "ng build --prod"
     },
   "private": true,
   "dependencies": {
