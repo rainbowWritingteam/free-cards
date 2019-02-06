@@ -9,8 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "deploy": "ng build --prod && firebase deploy",
-    "postinstall": "ng build --aot --target=production"
-  },
+    "postinstall": "ng build --target=production -e ${NODE_ENV:-production} --aot"
+    },
   "private": true,
   "dependencies": {
     "@angular/cli": "~7.1.4",
