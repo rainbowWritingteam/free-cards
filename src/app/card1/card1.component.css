@@ -1,0 +1,107 @@
+#top {
+  
+   left: 15%;
+   position: absolute;
+
+  
+ }
+
+ .title {
+    color: #ECF0F1;
+    font-size: 2.5vh;
+    font-weight: 200;
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+    text-align: justify;
+    background-color: rgb(219, 30, 30);
+    padding: 5px 5px 5px 10px;
+   
+ }
+
+
+#menu {
+    position: absolute;
+    background-color: #ECF0F1;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    /* note: the translateZ(0) enables hardware accel */
+    /* without it, there is a weird gap between panels */
+    transform: translate(-50%, -50%) translateZ(0);
+    height: 45vh;
+    width: 46.33333vh;
+    overflow: hidden;
+    padding: 0%  !important;
+  }
+
+ textarea{
+   position: relative;
+   width: 46.33333vh;
+   border: none;
+ }
+
+ label{
+    margin-top: 2.5vh;
+    margin-right: 3px;
+    font-size: 3.5vh;
+    line-height: 5vh;
+    font-weight: 200;
+    font-family: 'Merriweather', serif;
+  }
+
+
+ 
+  
+  input[type=submit] { 
+   background-image: url("../../assets/images/next.png");
+   background-size: 50px 30px;
+   background-position: right;
+   background-repeat: no-repeat;
+   background-color: #F1C40F;
+   border: none;
+   color: white;
+   padding: 10px 110px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-family: 'Roboto Slab', serif;
+   font-size: 18px;
+   -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+   box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+   -webkit-border-radius: 5px 5px 5px 5px;
+   border-radius: 5px 5px 5px 5px;
+   margin: 5px 10px 20px 20px;
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -ms-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+   position: absolute;
+   top: 75%;
+  left: 39.4%;
+  cursor : pointer;
+ }
+  
+
+ .round .step {
+  background: #F1C40F;
+  border-radius: 0.8em;
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.6em;
+  margin-right: 5px;
+  text-align: center;
+  width: 1.6em; 
+  align-content: center;
+ 
+}
+
+.round {
+  left: 75%;
+  top: 12%;
+  position: absolute;
+}

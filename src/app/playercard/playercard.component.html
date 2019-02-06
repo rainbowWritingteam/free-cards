@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+ 
+<head></head>
+<body>
+	<div >
+      <div *ngFor="let card2 of playersArray;let id = index;">
+<div id="menu">
+		<div class="panel">
+			<h1 class="name">Functionality</h1>
+           <h2 class="type">{{card2.gameid}}</h2>
+    </div>
+    <div class="panel">
+          <h1 class="name">Application</h1>
+          <h2 class="type">{{card2.application}}</h2>
+      </div>
+    <div class="panel">
+          <h1 class="name">Relevant Technology</h1>
+          <h2 class="type">{{card2.relevantTechnology}}</h2>
+      </div>
+    <div class="panel">
+          <h1 class="name">Weakness</h1>
+          <h2 class="type">{{card2.weaknesses}}</h2>
+      </div>
+    <div class="panel">
+          <h1 class="name">Customer</h1>
+          <h2 class="type">{{card2.customer}}</h2>
+      </div>
+    <div class="panel">
+          <h1 class="name">Needs</h1>
+          <h2 class="type">{{card2.needs}}</h2>
+      </div>
+    <div class="panel">
+        <h1 class="name">Trends & Issues</h1>
+        <h2 class="type">{{card2.trendsIssues}}</h2>
+      
+		</div>
+		</div>
+		
+</div>
+
+<input type="button" class="fadeIn fourth" value="Go Back &#8594;"  [routerLink]="['/dash']" >
+
+
+  </div>
+
+	</body>

@@ -1,0 +1,32 @@
+<div>
+
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+<div id="top">
+ <div *ngFor="let game of nameArray;">
+        <label style="color:#F1C40F;font-size:100%">{{game.gameid}}</label><label  *ngFor="let player of playerArray;" style="font-size:100%">&rsaquo; {{player.name}}</label>
+        <p style="color:rgb(219, 30, 30);font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 350%"><countdown #countdown [config]="{leftTime: 60}">$!m!:$!s!</countdown></p>
+</div>
+</div>
+
+<div class="round">
+  <label>Round  1/7</label> <br>
+  <span class="step">1</span>
+</div>
+
+<div id="menu">
+
+<p class="title">  Functionality </p>
+			<textarea #content class='autoExpand' rows='3' data-min-rows='3' placeholder='Max 200 characters ' style="background-color:#ECF0F1;" name="cardcontent"  [(ngModel)]="cardcontent" maxlength="55">
+            </textarea>
+     
+</div>
+
+<input type="submit" class="fadeIn fourth" value="Next" (click)="submitContent(content.value)" >
+
+
+
+</div>
+
+
+
+		

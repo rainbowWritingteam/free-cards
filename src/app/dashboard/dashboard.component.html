@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+ 
+<head></head>
+ 
+<body>
+	<div >
+
+      <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+
+
+      <div *ngFor="let game of nameArray;">
+          <label style="color:#F1C40F;font-size:100%">RainbowCards</label><label style="font-size:100%">&rsaquo;<div *ngFor="let player of playerArray;">{{game.gameid}}</div></label>
+          <p>Share</p>
+        </div>
+<ul>
+<div *ngFor="let card2 of round2Array;">
+<li>
+    <div id="menu">
+		<div class="panel">
+      <p class="title">  Functionality </p>
+          <h2 class="type">{{card2.round7.functionnality}}</h2>
+    </div>
+  
+    <div class="panel">
+      <p class="title">  Application </p>
+          <h2 class="type">{{card2.round7.application}}</h2>
+      </div>
+
+    <div class="panel">
+       <p class="title">Technology/Industry</p>
+          <h2 class="type">{{card2.round7.relevantTechnology}}</h2>
+    </div>
+
+    <div class="panel">
+      <p class="title">  Weakness </p>
+          <h2 class="type">{{card2.round7.weaknesses}}</h2>
+    </div>
+
+    <div class="panel">
+      <p class="title"> Customer </p>
+          <h2 class="type">{{card2.round7.customer}}</h2>
+    </div>
+
+    <div class="panel">
+      <p class="title">  Needs </p>
+          <h2 class="type">{{card2.round7.needs}}</h2>
+    </div>
+     
+    <div class="panel">
+      <p class="title">  Trends & Issues </p>
+      <h2 class="type">{{card2.round7.needs}}</h2>
+		</div>
+    
+  </div>
+  </li>
+    </div>
+  </ul>
+  </div>
+
+
+	</body>

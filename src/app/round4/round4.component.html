@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+ 
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+
+</head>
+ 
+<body>
+    <style>
+        .cardList {
+          display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: flex-start;
+ }
+ /* Column Gap */
+ .cardList > * {
+   box-sizing: border-box;
+ }
+ .cardList > *:not(:last-child) {
+   margin-right: 32px;
+ }
+ /* Item sizing */
+ .cardListItem {
+   flex: 0 1 calc(33.3% - 32px);
+ }
+      </style>
+ 
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+     
+        <div >
+      
+             
+                <p className="par" >
+                          Set your playing cards                 
+                </p>
+              
+              <div class="cardList">
+                <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                  <div class="card-header">Header</div>
+                  <div class="card-body">
+                    <input type="text" class="form-control"  placeholder="Game Id" required>                </div>
+                </div>
+                <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+                  <div class="card-header">Header</div>
+                  <div class="card-body">
+                    <h5 class="card-title">Success card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div> 
+                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                  <div class="card-header">Header</div>
+                  <div class="card-body"> 
+                    <h5 class="card-title">Success card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+                <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                  <div class="card-header">Header</div>
+                  <div class="card-body"> 
+                    <h5 class="card-title">Success card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+              </div>
+
+                
+
+   <div style="padding-left: 1150px;">
+    <a [routerLink]="['/round4']"   class="btn btn-danger mb-2" > Pass </a>
+  </div>
+
+
+              </div>
+        
+ 
+ 
+</body></html>

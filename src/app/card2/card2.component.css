@@ -1,0 +1,238 @@
+body {
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+  }
+  #info {
+    display: none;
+  }
+
+  #top {
+    left: 15%;
+    position: absolute;
+ 
+  }
+
+  .title {
+    font-size: 2.5vh;
+    font-weight: 200;
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+    text-align: justify;
+    color: #ECF0F1;
+
+   
+ }
+
+  label{
+    left: 2vh;
+    top: 60%;
+    margin-top: 2.5vh;
+    font-size: 3.5vh;
+    line-height: 5vh;
+    font-weight: 300;
+    margin-left: 10px;
+    font-family: 'Merriweather', serif;
+  }
+
+
+
+  /* the app - a beer menu / ordering app */
+  #menu {
+    background-color: #ECF0F1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    column-gap: 0em;
+    top: 50%;
+    left: 50%;
+    /* note: the translateZ(0) enables hardware accel */
+    /* without it, there is a weird gap between panels */
+    transform: translate(-50%, -50%) translateZ(0);
+    height: 45vh;
+    width: 46.33333vh;
+    overflow: hidden;
+    padding: 0%  !important;
+  }
+  
+
+
+  label{
+    left: 2vh;
+    top: 60%;
+    margin-top: 2.5vh;
+    font-size: 3.5vh;
+    line-height: 5vh;
+    font-weight: 300;
+  }
+
+ 
+  .panel {
+    position: relative;
+    flex-grow: 0;
+    transition: all 0.4s ease;
+    transition-delay: 0s;
+    padding-bottom: 0%;
+    column-gap: 0em !important;
+    -webkit-column-gap: 0ch;
+    /* the icon for this beer (initially invisible) */
+    /* each panel has its own color scheme */
+  }
+  
+  .panel textarea {
+    position: relative;
+    width: 46.33333vh;
+    border: none;
+   
+  
+  }
+  
+  .panel .name {
+    transition: all 0.4s ease;
+    transition-delay: 0;
+    
+  }
+ 
+  .panel .type {
+    transition: all 0.4s ease;
+    transition-delay: 0;
+  }
+  .panel .name {
+    font-size: 3.5vh;
+    line-height: 7vh;
+    font-weight: 200;
+    width: 100%;
+    height: 100%;
+  }
+  .panel .type {
+    left: 5vh;
+    top: 50%;
+    font-size: 0;
+    font-weight: 100;
+  }
+
+  .panel:nth-of-type(1) p{
+   background-color: rgb(219, 30, 30);
+    padding: 5px 5px 5px 10px;
+    margin-bottom: 0%;
+    margin-top: 0%;
+  }
+
+  .panel:nth-of-type(1) .type {
+
+    margin-bottom: 0%;
+   }
+  
+  .panel:nth-of-type(2) {
+    z-index: 8;
+    background: #ECF0F1;
+  }
+  .panel:nth-of-type(2) p {
+    background-color: #F39C12;
+    padding: 5px 5px 5px 10px;
+    margin-bottom: 0%;
+    margin-top: 0%;
+  }
+
+  .panel:nth-of-type(2) .type {
+
+    margin-bottom: 0%;
+   }
+ 
+  .panel:nth-of-type(4) h1, .panel:nth-of-type(4) h2, .panel:nth-of-type(4) h3 {
+    color: #ECF0F1;
+  }
+  /* panels get larger and show more info when you hover over them */
+  .panel:hover {
+    flex-grow: 2;
+  }
+ 
+  .panel:hover .type {
+    left: 10vh;
+    margin-top: 1.75vh;
+    font-size: 2.5vh;
+  }
+ 
+  /* when you click on a panel, the others are hidden */
+  .panel.hidden {
+    flex-grow: 0;
+    color: #0A5F44;
+  }
+  .panel.hidden * {
+    opacity: 0;
+    pointer-events: none;
+  }
+  /* when you click on a panel, it becomes active */
+  .panel.active {
+    flex-grow: 1;
+    transition-delay: 0s;
+  }
+ 
+  .panel.active .name, .panel.active .type {
+    transition-delay: 0s;
+  }
+  .panel.active .name {
+    left: 15vh;
+    margin-top: 5vh;
+    font-size: 7.5vh;
+    font-weight: 100;
+  }
+  .panel.active:nth-of-type(1) .name {
+    color: #3b3b56;
+  }
+ 
+  .panel.active:nth-of-type(2) .name {
+    color: #fff;
+  }
+ 
+  .panel.active:nth-of-type(3) .name {
+    color: #f6ec82;
+  }
+
+  .panel.active:nth-of-type(4) .name {
+    color: #dfb361;
+  }
+  
+  @media (orientation: portrait) {
+    #menu  {
+      border-radius: 0;
+      width: 50%;
+      height: 50vh;
+    }
+  }
+  
+  input[type=button] { 
+    background-image: url("../../assets/images/next.png");
+    background-size: 50px 30px;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: #F1C40F;
+    border: none;
+    color: white;
+    padding: 10px 110px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+    box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    margin: 5px 10px 20px 20px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    top: 75%;
+   left: 39.4%;
+   cursor : pointer;
+  }
+
+  .round {
+    left: 75%;
+    top: 12%;
+    position: absolute;
+  }
+  

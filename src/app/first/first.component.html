@@ -1,0 +1,26 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<div class="wrapper fadeInDown">
+
+  <div id="formContent">
+    <!-- Tabs Titles -->
+  <div *ngFor="let game of nameArray;">
+    <label style="color:#F1C40F;font-size:100%;margin-right: 70%;margin-top: 10%;font-family: Arial, Helvetica, sans-serif">{{game.gameid}}</label>
+  </div>
+    <!-- Icon -->
+    <div class="fadeIn first">
+
+    </div>
+
+    <!-- Login Form -->
+    <form (submit)="Onsubmit()"   ngNativeValidate>
+      <h4>Enter your nickname </h4><br>
+      <input type="text"  class="fadeIn second" name="name" [(ngModel)]="name" placeholder=" your nickname" required>
+      <input type="submit" class="fadeIn fourth"  value="OK" [routerLink]="['/round1']" (click)="Onsubmit()" >
+    </form>
+
+</div>

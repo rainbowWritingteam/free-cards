@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+ 
+<head></head>
+ 
+<body>
+	<div >
+
+      <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+
+
+      <div *ngFor="let game of nameArray;">
+          <label style="color:#F1C40F;font-size:100%">{{game.gameid}}</label><label  *ngFor="let player of playerArray;" style="font-size:100%">&rsaquo; {{player.name}}</label>
+          <p style="color:rgb(219, 30, 30);font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 350%"><countdown #countdown [config]="{leftTime: 60}">$!m!:$!s!</countdown></p>
+      </div>
+
+      <div class="round">
+          <label>Round  7/7</label> <br>
+          <span class="step">1</span>
+      </div>
+
+    <div id="menu">
+		<div class="panel">
+      <p class="title">  Functionality </p>
+      <div *ngFor="let card2 of round2Array;let id = index;">
+        <div *ngIf="id == 0"> 
+          <h2 class="type">{{card2.round6.functionnality}}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+        <p class="title">  Application </p>
+        <div *ngFor="let card2 of round2Array;let id = index;">
+          <div *ngIf="id == 0"> 
+          <h2 class="type">{{card2.round6.application}}</h2>
+      </div>
+      </div>
+      </div>
+    <div class="panel">
+       <p class="title">Technology/Industry</p>
+       <div *ngFor="let card2 of round2Array;let id = index;">
+         <div *ngIf="id == 0"> 
+          <h2 class="type">{{card2.round6.relevantTechnology}}</h2>
+      </div>
+      </div>
+      </div>
+    <div class="panel">
+      <p class="title">  Weakness </p>
+      <div *ngFor="let card2 of round2Array;let id = index;">
+          <div *ngIf="id == 0"> 
+          <h2 class="type">{{card2.round6.weaknesses}}</h2>
+      </div>
+      </div>
+      </div>
+    <div class="panel">
+      <p class="title"> Customer </p>
+      <div *ngFor="let card2 of round2Array;let id = index;">
+           <div *ngIf="id == 0"> 
+          <h2 class="type">{{card2.round6.customer}}</h2>
+      </div>
+      </div>
+      </div>
+    <div class="panel">
+      <p class="title">  Needs </p>
+      <div *ngFor="let card2 of round2Array;let id = index;">
+      <div *ngIf="id == 0"> 
+          <h2 class="type">{{card2.round6.needs}}</h2>
+      </div>
+      </div>
+      </div><div class="panel">
+      <p class="title">  Trends & Issues </p><textarea #content class='autoExpand' rows='3' data-min-rows='3' placeholder='Write here ' style="background-color:#ECF0F1;" maxlength="55">
+			</textarea></div>
+		</div>
+		
+    <div *ngFor="let card2 of round2Array;let id = index;">
+      <div *ngIf="id == 0"> 
+    
+<input type="button" class="fadeIn fourth" value="Completed"   (click)="submitContent(card2.round6.functionnality,card2.round6.application,card2.round6.relevantTechnology,card2.round6.weaknesses,card2.round6.customer,card2.round6.needs,content.value)">
+
+</div>
+</div>
+	</div>
+
+	</body>

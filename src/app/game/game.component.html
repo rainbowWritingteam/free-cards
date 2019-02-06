@@ -1,0 +1,54 @@
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="../../assets/images/newlogo.PNG" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Game Form -->
+    <form  (submit)="Onsubmit()"   ngNativeValidate>
+      <h4>Enter your project name</h4>
+      <input type="text" id="gameid" class="fadeIn second" name="gameid"  [(ngModel)]="gameid" placeholder=" project name" required>
+      <input type="submit" class="fadeIn fourth" value="Join "  [routerLink]="['/game']" (click)="Onsubmit()" >
+        </form>
+ 
+ 
+ <a href="#guide" ><h6 style="color:rgb(0, 0, 0);">play guide here</h6></a>
+
+ <div id="guide" class="overlay">
+	<div class="popup"><br />
+    <a class="close" href="#">×</a><br>
+    <h4 style="color:rgb(255, 255, 255);">Be ready to play ! </h4>
+    <ol>
+      <li>Create your game name to join with other players.</li>
+      <li>The game should have at least two players .</li>
+      <li>Wait for all the players to join to start the game.</li>
+      <li>Make sure to fill out the each card  whithin the time limit.</li>
+      <li>You have exactly 7 words to express you idea in each card.</li>
+
+    </ol>
+<br>
+
+
+    
+	</div>
+</div>
+
+
+
+  </div>
+
+
+
+
+
+
+</div>

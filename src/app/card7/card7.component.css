@@ -1,0 +1,264 @@
+body {
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+#info {
+  display: none;
+}
+#top {
+  left: 15%;
+  position: absolute;
+
+}
+
+.title {
+  font-size: 2.5vh;
+  font-weight: 200;
+  font-family: 'Merriweather', serif;
+  text-transform: uppercase;
+  text-align: justify;
+  color: #ECF0F1;
+
+ 
+}
+
+label{
+  left: 2vh;
+  top: 60%;
+  margin-top: 2.5vh;
+  font-size: 3.5vh;
+  line-height: 5vh;
+  font-weight: 300;
+  margin-left: 10px;
+  font-family: 'Merriweather', serif;
+}
+
+
+
+/* the app - a beer menu / ordering app */
+#menu {
+  background-color: #ECF0F1;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  column-gap: 0em;
+  top: 50%;
+  left: 50%;
+  /* note: the translateZ(0) enables hardware accel */
+  /* without it, there is a weird gap between panels */
+  transform: translate(-50%, -50%) translateZ(0);
+  height: 78vh;
+  width: 46.33333vh;
+  overflow: hidden;
+  padding: 0%  !important;
+}
+  
+  /* info panels for each beer */
+  .panel {
+    position: relative;
+    clear:none;
+    flex-grow: 0;
+    transition: all 0.4s ease;
+    transition-delay: 0s;
+    padding-bottom: 0%;
+    column-gap: 0em;
+    -webkit-column-gap: 0ch;
+    /* the icon for this beer (initially invisible) */
+    /* each panel has its own color scheme */
+  }
+  
+  .panel textarea {
+    position: relative;
+    width: 46.33333vh;
+    border: none;
+  }
+  
+  .panel .name {
+    transition: all 0.4s ease;
+    transition-delay: 0;
+  }
+ 
+  .panel .type {
+    transition: all 0.4s ease;
+    transition-delay: 0;
+  }
+  .panel .name {
+    font-size: 3.5vh;
+    line-height: 7vh;
+    font-weight: 200;
+    width: 100%;
+    height: 100%;
+  }
+  .panel .type {
+    left: 5vh;
+    top: 50%;
+    font-size: 0;
+    font-weight: 100;
+  }
+  
+ 
+
+  .panel:nth-of-type(1) p{
+    background-color: rgb(219, 30, 30);
+     padding: 5px 5px 5px 10px;
+     margin-bottom: 0%;
+     margin-top: 0%;
+   }
+
+   .panel:nth-of-type(1) .type {
+
+    margin-bottom: 0%;
+   }
+   
+   .panel:nth-of-type(2) p {
+     background-color: #F39C12;
+     padding: 5px 5px 5px 10px;
+     margin-bottom: 0%;
+     margin-top: 0%;
+   }
+ 
+   .panel:nth-of-type(2) .type{
+
+    margin-bottom: 0%;
+   }
+
+
+   .panel:nth-of-type(3) p {
+     background-color: #F1C40F;
+     padding: 5px 5px 5px 10px;
+     margin-bottom: 0%;
+     margin-top: 0%;
+   }
+
+   .panel:nth-of-type(3) .type{
+
+    margin-bottom: 0%;
+   }
+
+  .panel:nth-of-type(4) p{
+    background:rgb(15, 146, 59);
+    padding: 5px 5px 5px 10px;
+    margin-bottom: 0%;
+    margin-top: 0%;
+  }
+
+  .panel:nth-of-type(4) .type{
+
+    margin-bottom: 0%;
+   }
+
+
+
+  .panel:nth-of-type(5) p{
+    background:rgb(14, 177, 252);
+    padding: 5px 5px 5px 10px;
+    margin-bottom: 0%;
+    margin-top: 0%;
+  }
+
+  .panel:nth-of-type(5) .type{
+
+    margin-bottom: 0%;
+   }
+
+
+  .panel:nth-of-type(6) p{
+    background:rgb(23, 75, 219);
+    padding: 5px 5px 5px 10px;
+    margin-bottom: 0%;
+    margin-top: 0%;
+  }
+
+  .panel:nth-of-type(6) .type{
+
+    margin-bottom: 0%;
+   }
+
+   .panel:nth-of-type(7) .type{
+
+    margin-bottom: 0%;
+   }
+
+.panel:nth-of-type(7) p{
+  padding: 5px 5px 5px 10px;
+  background: #9e0b92;
+  margin-bottom: 0%;
+  margin-top: 0%;
+}
+
+/* panels get larger and show more info when you hover over them */
+.panel:hover {
+  flex-grow: 2;
+}
+.panel:hover .name {
+  left: 10vh;
+  margin-top: -3.75vh;
+}
+.panel:hover .type {
+  left: 10vh;
+  margin-top: 1.75vh;
+  font-size: 2.5vh;
+}
+
+/* when you click on a panel, the others are hidden */
+.panel.hidden {
+  flex-grow: 0;
+}
+.panel.hidden * {
+  opacity: 0;
+  pointer-events: none;
+}
+/* when you click on a panel, it becomes active */
+.panel.active {
+  flex-grow: 1;
+  transition-delay: 0s;
+}
+
+@media (orientation: portrait) {
+  #menu  {
+    border-radius: 0;
+    width: 50%;
+    height: 78vh;
+    top: 68%;
+  }
+}
+
+
+input[type=button] { 
+  background-image: url("../../assets/images/next.png");
+  background-size: 50px 30px;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-color: #F1C40F;
+  border: none;
+  color: white;
+  padding: 10px 110px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'Roboto Slab', serif;
+  font-size: 18px;
+  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+  margin: 5px 10px 20px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+    top: 88%;
+   left: 38.4%;
+   cursor : pointer;
+}
+
+.round {
+  left: 75%;
+  top: 12%;
+  position: absolute;
+}
+
+
+
