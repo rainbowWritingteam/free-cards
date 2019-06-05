@@ -1,12 +1,15 @@
 /* BASIC */
 
 html {
-  background-color: #56baed;
+  background-color: #000000;
+  background-size: 100%;
 }
 
 body {
   font-family: "Poppins", sans-serif;
-  height: 100vh;
+  background-color: #000000!important;
+  margin: 0% !important;
+  height: 100%;
 }
 
 a {
@@ -37,7 +40,7 @@ h2 {
   justify-content: center;
   width: 100%;
   min-height: 100%;
-  padding: 20px;
+  padding-top: 20px;
 }
 
 #formContent {
@@ -110,17 +113,18 @@ input[type=submit] {
   background-color: #F1C40F;
   border: none;
   color: white;
-  padding: 15px 90px;
+  padding: 15px 80px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-family: 'Roboto Slab', serif;
-  font-size: 18px;
+  font-size: 3vh;
   -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
   box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
   -webkit-border-radius: 5px 5px 5px 5px;
   border-radius: 5px 5px 5px 5px;
   margin: 5px 10px 20px 20px;
+  margin-left: 0px;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -151,7 +155,7 @@ input[type=text] {
   background-color: #f6f6f6;
   border: none;
   color: #0d0d0d;
-  padding: 15px 32px;
+  padding: 15px 22px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -349,7 +353,7 @@ h1{
   background: #F1C40F;
   border-radius: 5px;
   width: 35%;
-  height: 45%;
+  height: 75%;
   position: relative;
   transition: all 5s ease-in-out;
 }

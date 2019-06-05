@@ -1,20 +1,22 @@
 body {
   overflow: hidden;
-  font-family: 'Roboto', sans-serif;
+  font-family: sans-serif !important;
 }
 #info {
   display: none;
 }
-#top {
-  left: 15%;
-  position: absolute;
 
+
+.top {
+  left: 5%;
+  position: absolute;
+ top:0%;
 }
 
 .title {
   font-size: 2.5vh;
   font-weight: 200;
-  font-family: 'Merriweather', serif;
+  font-family: sans-serif !important;
   text-transform: uppercase;
   text-align: justify;
   color: #ECF0F1;
@@ -30,8 +32,9 @@ label{
   line-height: 5vh;
   font-weight: 300;
   margin-left: 10px;
-  font-family: 'Merriweather', serif;
-}
+  color: #eee;
+  }
+
 
 
 
@@ -42,7 +45,7 @@ label{
   display: flex;
   flex-direction: column;
   column-gap: 0em;
-  top: 50%;
+  top: 60%;
   left: 50%;
   /* note: the translateZ(0) enables hardware accel */
   /* without it, there is a weird gap between panels */
@@ -105,9 +108,9 @@ label{
      margin-top: 0%;
    }
 
-   .panel:nth-of-type(1) .type {
+   .panel:nth-of-type(1) {
+    background-color: rgb(219, 30, 30);
 
-    margin-bottom: 0%;
    }
    
    .panel:nth-of-type(2) p {
@@ -117,9 +120,9 @@ label{
      margin-top: 0%;
    }
  
-   .panel:nth-of-type(2) .type{
+   .panel:nth-of-type(2) {
+    background-color: #F39C12;
 
-    margin-bottom: 0%;
    }
 
 
@@ -130,9 +133,9 @@ label{
      margin-top: 0%;
    }
 
-   .panel:nth-of-type(3) .type{
+   .panel:nth-of-type(3) {
+    background-color: #F1C40F;
 
-    margin-bottom: 0%;
    }
 
   .panel:nth-of-type(4) p{
@@ -142,9 +145,9 @@ label{
     margin-top: 0%;
   }
 
-  .panel:nth-of-type(4) .type{
+  .panel:nth-of-type(4) {
+    background:rgb(15, 146, 59);
 
-    margin-bottom: 0%;
    }
 
 
@@ -156,9 +159,9 @@ label{
     margin-top: 0%;
   }
 
-  .panel:nth-of-type(5) .type{
+  .panel:nth-of-type(5) {
+    background:rgb(14, 177, 252);
 
-    margin-bottom: 0%;
    }
 
 
@@ -169,9 +172,9 @@ label{
     margin-top: 0%;
   }
 
-  .panel:nth-of-type(6) .type{
+  .panel:nth-of-type(6) {
+    background:rgb(23, 75, 219);
 
-    margin-bottom: 0%;
    }
 
    .panel:nth-of-type(7) .type{
@@ -214,51 +217,112 @@ label{
   transition-delay: 0s;
 }
 
-@media (orientation: portrait) {
-  #menu  {
-    border-radius: 0;
-    width: 50%;
-    height: 78vh;
-    top: 68%;
-  }
-}
 
 
 input[type=button] { 
   background-image: url("../../assets/images/next.png");
-  background-size: 50px 30px;
-  background-position: right;
-  background-repeat: no-repeat;
-  background-color: #F1C40F;
-  border: none;
-  color: white;
-  padding: 10px 110px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-family: 'Roboto Slab', serif;
-  font-size: 18px;
-  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
-  box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
-  -webkit-border-radius: 5px 5px 5px 5px;
-  border-radius: 5px 5px 5px 5px;
-  margin: 5px 10px 20px 20px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  position: absolute;
-    top: 88%;
-   left: 38.4%;
+    background-size: 50px 30px;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: #F1C40F;
+    border: none;
+    color: white;
+    padding: 10px 110px;
+    text-align: center;
+    -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+    box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
    cursor : pointer;
+  }
+
+  .bottom{
+    margin:auto;
+    text-align: center;
+    top: 94%;
+    position: absolute;
+  }
+
+.countdown {
+  color: rgb(219, 30, 30);
+  font-size: 9vh;
 }
+
 
 .round {
-  left: 75%;
-  top: 12%;
+  left: 72%;
+  top: 0%;
   position: absolute;
+  font-family: sans-serif !important;
 }
 
 
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+}
 
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}

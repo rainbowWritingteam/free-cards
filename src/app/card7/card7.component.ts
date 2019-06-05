@@ -54,6 +54,8 @@ export class Card7Component implements OnInit {
     }
   
 
+
+
   getContent(){
 
     this.cardsService.getPlayers(this.cardsService.gameid).subscribe(
@@ -90,6 +92,7 @@ export class Card7Component implements OnInit {
     submitContent(functionnality,application,technology,weaknesses,customer,needs,trends) {
 
       this.cardsService.addcard7(functionnality,application,technology,weaknesses,customer,needs,trends,this.cardsService.gameid);
-      this.route.navigate(['dash']);   
+      this.route.navigate(['dash',this.cardsService.gameid]);   
+      
     }
 }

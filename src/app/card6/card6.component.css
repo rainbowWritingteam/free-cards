@@ -1,23 +1,34 @@
 body {
     overflow: hidden;
-    font-family: 'Roboto', sans-serif;
+    font-family: sans-serif !important;
   }
   #info {
     display: none;
   }
   /* the app - a beer menu / ordering app */
-  #top {
-    left: 15%;
-    position: absolute;
-  }
+
+
+ .top {
+  left: 5%;
+  position: absolute;
+ top:0%;
+}
   
   .title {
     font-size: 2.5vh;
     font-weight: 200;
-    font-family: 'Merriweather', serif;
-    text-transform: uppercase;
+    font-family: sans-serif !important;
     text-align: justify;
     color: #ECF0F1;
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
   }
   
   label{
@@ -28,9 +39,19 @@ body {
     line-height: 5vh;
     font-weight: 300;
     margin-left: 10px;
-    font-family: 'Merriweather', serif;
-  }
+    color: #eee;
+    }
   
+  
+
+    .play {
+      margin: 0;
+     position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%) 
+    }
     /* the app - a beer menu / ordering app */
     #menu {
       background-color: #ECF0F1;
@@ -38,7 +59,7 @@ body {
       display: flex;
       flex-direction: column;
       column-gap: 0em;
-      top: 50%;
+      top: 57%;
       left: 50%;
       /* note: the translateZ(0) enables hardware accel */
       /* without it, there is a weird gap between panels */
@@ -98,8 +119,9 @@ body {
       margin-top: 0%;
      }
      
-  .panel:nth-of-type(1) .type{
-     margin-bottom: 0%;
+  .panel:nth-of-type(1) {
+    background-color: rgb(219, 30, 30);
+
      
     }
      .panel:nth-of-type(2) p {
@@ -109,8 +131,8 @@ body {
        margin-top: 0%;
      }
    
-     .panel:nth-of-type(2) .type{
-      margin-bottom: 0%;
+     .panel:nth-of-type(2) {
+      background-color: #F39C12;
       
      }
 
@@ -122,9 +144,9 @@ body {
        margin-top: 0%;
      }
   
-     .panel:nth-of-type(3) .type{
-      margin-bottom: 0%;
-      
+     .panel:nth-of-type(3) {
+      background-color: #F1C40F;
+
      }
 
     .panel:nth-of-type(4) p{
@@ -134,9 +156,9 @@ body {
       margin-top: 0%;
     }
 
-    .panel:nth-of-type(4) .type{
-      margin-bottom: 0%;
-      
+    .panel:nth-of-type(4){
+      background:rgb(15, 146, 59);
+
      }
 
     .panel:nth-of-type(5) p{
@@ -146,13 +168,13 @@ body {
       margin-top: 0%;
     }
 
-    .panel:nth-of-type(5) .type{
-      margin-bottom: 0%;
-      
+    .panel:nth-of-type(5){
+      background:rgb(14, 177, 252);
+
      }
 
     .panel:nth-of-type(6) p{
-      background:rgb(23, 75, 219);
+      background:#9e0b92;
       padding: 5px 5px 5px 10px;
       margin-bottom: 0%;
       margin-top: 0%;
@@ -200,16 +222,7 @@ body {
     font-size: 7.5vh;
     font-weight: 100;
   }
-  
-  @media (orientation: portrait) {
-    #menu  {
-      border-radius: 0;
-      width: 50%;
-      height: 75vh;
-      top: 68%;
-    }
-  }
-  
+
   
   
   .label.label-default.rank-label {
@@ -261,31 +274,40 @@ body {
     color: white;
     padding: 10px 110px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-family: 'Roboto Slab', serif;
-    font-size: 18px;
     -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
     box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
     -webkit-border-radius: 5px 5px 5px 5px;
     border-radius: 5px 5px 5px 5px;
-    margin: 5px 10px 20px 20px;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    position: absolute;
-    top: 86%;
-   left: 39.4%;
    cursor : pointer;
   }
 
-  .round {
-    left: 75%;
-    top: 12%;
+  .bottom{
+    margin:auto;
+    text-align: center;
+    top: 98%;
     position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) ;
   }
+  .countdown {
+    color: rgb(219, 30, 30);
+    font-size: 9vh;
+  }
+  
+  
+  .round {
+    left: 72%;
+    top: 0%;
+    position: absolute;
+    font-family: sans-serif !important;
+  }
+  
   
   
   

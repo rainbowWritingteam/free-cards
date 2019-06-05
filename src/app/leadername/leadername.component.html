@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<!------ Include the above in your HEAD tag ---------->
+
+<body>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<div class="wrapper fadeInDown">
+
+  <div id="formContent">
+    <!-- Tabs Titles -->
+  <div *ngFor="let game of nameArray;">
+    <label style="color:#F1C40F;font-size:100%;margin-right: 70%;margin-top: 10%;font-family: Arial, Helvetica, sans-serif">{{game.gameid}}</label>
+  </div>
+    <!-- Icon -->
+    <div class="fadeIn first">
+
+    </div>
+
+    <!-- Login Form -->
+    <form (submit)="Onsubmit()"   ngNativeValidate>
+      <h4>Choose your leader surname</h4><br>
+      <input type="text"  class="fadeIn second" name="name" [(ngModel)]="name" placeholder="your surname" required>
+      
+      <input type="submit" class="fadeIn fourth"  value="OK" [routerLink]="['/cards']" (click)="Onsubmit()">
+    </form>
+
+</div>
+</div>
+</body></html>

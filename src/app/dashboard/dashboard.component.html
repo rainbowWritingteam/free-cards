@@ -1,61 +1,109 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp">
- 
-<head></head>
- 
-<body>
-	<div >
+    <head>
+        <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+      
+      </head>
+       
+      <body>
+       
+              <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+       
+<!-- Displaying the game project name -->
 
-      <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <div  class="top"   *ngFor="let game of nameArray;">
+        <label style="color:#F1C40F;font-family: sans-serif !important;">Persona Game</label><label style="font-family: sans-serif !important;"><div *ngFor="let player of nameArray;">&rsaquo; {{game.gameid}}</div></label>
+    </div>
+
+    <div class="round">
+        <a href="dash/{{gameid}}#guide" class="ahref"><h5 style="color:#eee;">Save</h5></a>
+        <br>
+    </div>
 
 
-      <div *ngFor="let game of nameArray;">
-          <label style="color:#F1C40F;font-size:100%">RainbowCards</label><label style="font-size:100%">&rsaquo;<div *ngFor="let player of playerArray;">{{game.gameid}}</div></label>
-          <p>Share</p>
-        </div>
-<ul>
+	<div class="wrapper">
+     
+<!-- Displaying all the cards with title and content -->
+
+<div class="row">
 <div *ngFor="let card2 of round2Array;">
-<li>
+<div class="column">
     <div id="menu">
 		<div class="panel">
-      <p class="title">  Functionality </p>
-          <h2 class="type">{{card2.round7.functionnality}}</h2>
+      <div *ngFor="let card of cardsArray;let id = index;"> 
+        <div *ngIf="id == 0">  
+          <p class="title" >{{card.name}}</p>
+        </div>
+      </div> 
+          <p>{{card2.round6.functionnality}}</p>
     </div>
   
     <div class="panel">
-      <p class="title">  Application </p>
-          <h2 class="type">{{card2.round7.application}}</h2>
+      <div *ngFor="let card of cardsArray;let id = index;"> 
+        <div *ngIf="id == 1">  
+          <p class="title" >{{card.name}}</p>
+        </div>
+      </div> 
+          <p>{{card2.round6.application}}</p>
       </div>
 
     <div class="panel">
-       <p class="title">Technology/Industry</p>
-          <h2 class="type">{{card2.round7.relevantTechnology}}</h2>
+      <div *ngFor="let card of cardsArray;let id = index;"> 
+        <div *ngIf="id == 2">  
+         <p class="title" >{{card.name}}</p>
+        </div>
+      </div> 
+          <p>{{card2.round6.relevantTechnology}}</p>
     </div>
 
     <div class="panel">
-      <p class="title">  Weakness </p>
-          <h2 class="type">{{card2.round7.weaknesses}}</h2>
+      <div *ngFor="let card of cardsArray;let id = index;"> 
+        <div *ngIf="id == 3">  
+          <p class="title" >{{card.name}}</p>
+        </div>
+      </div>  
+      <p>{{card2.round6.weaknesses}}</p>
+    </div>
+
+
+    <div class="panel">
+      <div *ngFor="let card of cardsArray;let id = index;"> 
+        <div *ngIf="id == 4">  
+          <p class="title" >{{card.name}}</p>
+        </div>
+      </div> 
+          <p>{{card2.round6.customer}}</p>
     </div>
 
     <div class="panel">
-      <p class="title"> Customer </p>
-          <h2 class="type">{{card2.round7.customer}}</h2>
-    </div>
-
-    <div class="panel">
-      <p class="title">  Needs </p>
-          <h2 class="type">{{card2.round7.needs}}</h2>
+      <div *ngFor="let card of cardsArray;let id = index;"> 
+        <div *ngIf="id == 5">  
+          <p class="title" >{{card.name}}</p>
+        </div>
+      </div> 
+        <p>{{card2.round6.needs}}</p>
     </div>
      
-    <div class="panel">
-      <p class="title">  Trends & Issues </p>
-      <h2 class="type">{{card2.round7.needs}}</h2>
-		</div>
-    
   </div>
-  </li>
+</div>
     </div>
-  </ul>
+  </div>
+
+
+  <div id="guide" class="overlay">
+      <div class="popup"><br />
+        <a class="close" href="dash/{{gameid}}">×</a><br>
+        <h4 style="color:rgb(255, 255, 255);">Save your link ! </h4>
+      <a href="https://rainbow-free-cards.firebaseapp.com/dash/{{gameid}}">https://rainbow-cards.firebaseapp.com/dash/{{gameid}}</a>
+       <p>If you have any issues, please do contact us : </p>
+       <p style="text-align:center">rainboww.writing@gmail.com</p>
+    <br>
+    
+    
+        
+      </div>
+    </div>
   </div>
 
 

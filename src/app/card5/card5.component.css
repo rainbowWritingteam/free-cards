@@ -1,20 +1,30 @@
 body {
     overflow: hidden;
-    font-family: 'Roboto', sans-serif;
+    font-family: sans-serif !important;
   }
   #info {
     display: none;
   }
-  #top {
-    left: 15%;
+  
+  .top {
+    left: 5%;
     position: absolute;
+   top:0%;
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
   }
   
   .title {
     font-size: 2.5vh;
     font-weight: 200;
-    font-family: 'Merriweather', serif;
-    text-transform: uppercase;
+    font-family: sans-serif !important;
     text-align: justify;
     color: #ECF0F1;
   }
@@ -27,8 +37,9 @@ body {
     line-height: 5vh;
     font-weight: 300;
     margin-left: 10px;
-    font-family: 'Merriweather', serif;
-  }
+    color: #eee;
+    }
+  
   
     /* the app - a beer menu / ordering app */
     #menu {
@@ -37,7 +48,7 @@ body {
       display: flex;
       flex-direction: column;
       column-gap: 0em;
-      top: 50%;
+      top: 53%;
       left: 50%;
       /* note: the translateZ(0) enables hardware accel */
       /* without it, there is a weird gap between panels */
@@ -98,8 +109,8 @@ body {
      }
 
 
-     .panel:nth-of-type(1) .type {
-
+     .panel:nth-of-type(1)  {
+      background-color: rgb(219, 30, 30);
       margin-bottom: 0%;
      }
      
@@ -110,9 +121,9 @@ body {
        margin-top: 0%;
      }
 
-     .panel:nth-of-type(2) .type {
+     .panel:nth-of-type(2)  {
+      background-color: #F39C12;
 
-      margin-bottom: 0%;
      }
    
      .panel:nth-of-type(3) p {
@@ -122,9 +133,9 @@ body {
        margin-top: 0%;
      }
 
-     .panel:nth-of-type(3) .type {
+     .panel:nth-of-type(3)  {
+      background-color: #F1C40F;
 
-      margin-bottom: 0%;
      }
   
     .panel:nth-of-type(4) p{
@@ -134,9 +145,9 @@ body {
       margin-top: 0%;
     }
 
-    .panel:nth-of-type(4) .type {
+    .panel:nth-of-type(4)  {
+      background:rgb(15, 146, 59);
 
-      margin-bottom: 0%;
      }
 
     .panel:nth-of-type(5) p{
@@ -234,16 +245,7 @@ body {
     stroke: #fff;
   }
   
-  @media (orientation: portrait) {
-    #menu  {
-      border-radius: 0;
-      width: 50%;
-      height: 70vh;
-      top: 65%;
-    }
-  }
-  
-  
+
   
   .label.label-default.rank-label {
    background-color: rgb(81, 210, 183);
@@ -294,30 +296,46 @@ body {
     color: white;
     padding: 10px 110px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-family: 'Roboto Slab', serif;
-    font-size: 18px;
     -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
     box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
     -webkit-border-radius: 5px 5px 5px 5px;
     border-radius: 5px 5px 5px 5px;
-    margin: 5px 10px 20px 20px;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    position: absolute;
-    top: 84%;
-   left: 39.4%;
    cursor : pointer;
   }
 
-  .round {
-    left: 75%;
-    top: 12%;
+  .bottom{
+    margin:auto;
+    text-align: center; 
+    top: 93%;
     position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) ;
+  }
+
+  .countdown {
+    color: rgb(219, 30, 30);
+    font-size: 9vh;
   }
   
   
+  .round {
+    left: 72%;
+    top: 0%;
+    position: absolute;
+    font-family: sans-serif !important;
+  }
+  
+  .play {
+    margin: 0;
+   position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+  }

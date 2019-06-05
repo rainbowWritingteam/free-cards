@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+    <head>
+        <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+        <style>
+            * {
+              box-sizing: border-box;
+            }
+         
+            /* Float four columns side by side */
+            .column {
+              float: left;
+              width: 25%;
+              padding: 0 10px;
+            }
+            
+            /* Remove extra left and right margins, due to padding */
+            .row {margin: auto;}
+            
+            /* Clear floats after the columns */
+            .row:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+            
+            @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+            
+            /* Style the counter cards */
+            .card {
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+              padding: 16px;
+              text-align: center;
+              background-color: #f1f1f1;
+            }
+            </style>
+      </head>
+       
+      <body>
+       
+              <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+       
+
+    <div  class="top"   *ngFor="let game of nameArray;">
+        <label style="color:#F1C40F;font-family: sans-serif !important;">RainbowCards</label><label style="font-family: sans-serif !important;"><div *ngFor="let player of nameArray;">&rsaquo; {{game.gameid}}</div></label>
+    </div>
+
+    <div class="round">
+        <a href="dash/{{gameid}}#guide" class="ahref"><h5 style="color:#eee;">Save</h5></a>
+        <br>
+    </div>
+
+
+	<div class="row">
+    <div class="column">
+     <div id="menu">
+        <p class="title">기븐 정보</p>
+     </div>
+    </div>
+
+    <div class="column">
+        <div id="menu">
+           <p class="title">기븐 정보</p>
+        </div>
+       </div>
+
+       <div class="column">
+          <div id="menu">
+             <p class="title">기븐 정보</p>
+          </div>
+         </div>
+  </div>
+
+  <div class="row">
+      <div class="column">
+       <div id="menu">
+          <p class="title">기븐 정보</p>
+       </div>
+      </div>
+  
+      <div class="column">
+          <div id="menu">
+             <p class="title">기븐 정보</p>
+          </div>
+         </div>
+  
+         <div class="column">
+            <div id="menu">
+               <p class="title">기븐 정보</p>
+            </div>
+           </div>
+    </div>
+  
+
+  <div id="guide" class="overlay">
+      <div class="popup"><br />
+        <a class="close" href="dash/{{gameid}}">×</a><br>
+        <h4 style="color:rgb(255, 255, 255);">Save your link ! </h4>
+      <a href="https://rainbow-writing-30bbb.firebaseapp.com/dash/{{gameid}}">https://rainbow-writing-30bbb.firebaseapp.com/dash/{{gameid}}</a>
+       <p>If you have any issues, please do contact us : </p>
+       <p style="text-align:center">rainboww.writing@gmail.com</p>
+    <br>
+      </div>
+    </div>
+
+
+	</body>

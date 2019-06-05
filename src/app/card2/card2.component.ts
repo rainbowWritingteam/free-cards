@@ -16,10 +16,12 @@ export class Card2Component implements OnInit {
   id:any;
   nameArray=[];
   playerArray=[];
+  cardsArray=[];
   
   ngOnInit() {
- 
-    this.cardsService.getGame(this.cardsService.gameid).subscribe(
+  
+    // get the game project name
+   this.cardsService.getGame(this.cardsService.gameid).subscribe(
       list => {
         this.nameArray = list.map(item => {
           return {
@@ -33,9 +35,10 @@ export class Card2Component implements OnInit {
 
       this.getContent();
       this.getPlayername();
+      this.getCard();
     }
   
-  
+   // get players name
     getPlayername (){
   
       this.cardsService.getPlayername(this.cardsService.gameid).subscribe(
@@ -48,11 +51,24 @@ export class Card2Component implements OnInit {
           });
         });
   
-  
-  
     }
   
+    // get cards content
+    getCard() {
 
+      this.cardsService.getcard(this.cardsService.gameid).subscribe(
+        list => {
+          this.cardsArray = list.map(item => {
+            return {
+              $key: item.key,
+              ...item.payload.val()
+            };
+          });
+        });
+    }
+
+
+ // receive the cars from the previous player
   getContent(){
 
     this.cardsService.getPlayers(this.cardsService.gameid).subscribe(
@@ -86,7 +102,9 @@ export class Card2Component implements OnInit {
       }
     });
   }
+ 
 
+  // store the cards body, we have 2 cards 
   submitContent(functionnality,application) {
 
  this.cardsService.addcard2(functionnality,application,this.cardsService.gameid);

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<!------ Include the above in your HEAD tag ---------->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<body>
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="../../assets/images/Logo_rainbowwritingtif.jpg" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Game Form -->
+    <form  (submit)="Onsubmit()"   ngNativeValidate>
+      <h3>Create your Persona team game</h3>
+      <input type="text" id="gameid" class="fadeIn second" name="gameid"  [(ngModel)]="gameid" placeholder=" project name" required>
+      <input type="submit" class="fadeIn fourth" value="Join "  [routerLink]="['/leader']" (click)="Onsubmit()" >
+    </form>
+ 
+ 
+ <a href="createyourgame#guide" ><h4 style="color:rgb(0, 0, 0);">play guide here</h4></a>
+
+ <div id="guide" class="overlay">
+	<div class="popup"><br />
+    <a class="close" href="createyourgame">×</a><br>
+    <h3 style="color:rgb(255, 255, 255);">Be ready to play ! </h3>
+    <ol>
+      <li>Enter your Persona game name to join with other players.</li>
+      <li>The Persona game should have at least two players .</li>
+      <li>Create 6 playing cards .</li>
+      <li>Wait for all the players to join to start the game.</li>
+      <li>Once the game starts,you will have the playing cards.</li>
+      <li>You have 60 seconds to fill out each card.</li>
+    </ol>
+<br>
+</div>
+</div>
+
+
+
+  </div>
+
+
+
+
+
+
+</div>
+<h4 style="color:white;text-align:center"><a href="http://imagine.hanyang.ac.kr/" style="color:white">ImagineXlab</a> - All rights reserved</h4>
+
+</body>
+</html>

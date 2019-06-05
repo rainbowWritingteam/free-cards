@@ -36,17 +36,21 @@ export class CardsService {
    return this.gameList.snapshotChanges();
  }
 
- getPlayername(id){
+getPlayername(id){
 
-  this.gameList = this.firebase.list('game/'+id+'/users',query=>query.orderByKey().startAt(this.playerkey).limitToLast(1));
+  this.gameList = this.firebase.list('game/'+id+'/users',query=>query.orderByKey().startAt(id));
+   return this.gameList.snapshotChanges();
+ } 
+
+ getLeader(id,playerkey){
+
+  this.gameList = this.firebase.list('game/'+id+'/users/'+playerkey);
    return this.gameList.snapshotChanges();
  }
 
 
-
-
- getPlayer(){
-  this.gameList= this.firebase.list('users',query=>query.orderByKey().endAt(this.playerkey).limitToLast(1));
+ getPlayer(id){
+  this.gameList= this.firebase.list('game/'+id+'/users',query=>query.orderByKey().startAt(this.playerkey).limitToLast(1));
   return this.gameList.snapshotChanges();
  }
 
@@ -55,6 +59,20 @@ export class CardsService {
   this.gameList= this.firebase.list('users/'+id);
   return this.gameList.snapshotChanges();
  }
+
+ addcard(card,id) {
+  firebase.database().ref().child('game/'+id+'/playingcards').push(card);
+ }
+
+getcard(id) {
+  this.gameList= this.firebase.list('game/'+id+'/playingcards');
+  return this.gameList.snapshotChanges(); 
+}
+
+deletecard(id,cardkey){
+  firebase.database().ref().child('game/'+id+'/playingcards/'+cardkey).remove();
+
+}
 
  addcard1(card,id) {
 
@@ -129,6 +147,10 @@ getPlayersdash(id) {
    return this.gameList.snapshotChanges();
 }
 
+getPlayingcards(id) {
+  this.gameList = this.firebase.list('game/'+id+'/playingcards');
+   return this.gameList.snapshotChanges();
+}
 
   
 getId(id){

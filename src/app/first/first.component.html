@@ -1,7 +1,11 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
 <!------ Include the above in your HEAD tag ---------->
+
+<body>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 <div class="wrapper fadeInDown">
@@ -16,11 +20,14 @@
 
     </div>
 
-    <!-- Login Form -->
+    <!-- Nickname  Form -->
     <form (submit)="Onsubmit()"   ngNativeValidate>
       <h4>Enter your nickname </h4><br>
       <input type="text"  class="fadeIn second" name="name" [(ngModel)]="name" placeholder=" your nickname" required>
-      <input type="submit" class="fadeIn fourth"  value="OK" [routerLink]="['/round1']" (click)="Onsubmit()" >
+      
+      <input type="submit" class="fadeIn fourth"  value="OK" [routerLink]="['/round1']" (click)="Onsubmit()">
     </form>
 
 </div>
+</div>
+</body></html>

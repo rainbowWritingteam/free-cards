@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CardsService} from '../shared/cards.service';
-import {Router} from '@angular/router';
+import {Router, ActivatedRoute} from '@angular/router';
 import {AngularFireDatabase,AngularFireList} from 'angularfire2/database';
 import * as _ from "lodash";
 
@@ -14,14 +14,20 @@ export class DashboardComponent implements OnInit {
   round2Array=[];
   hideme=[];
   nameArray=[];
+  cardsArray=[];
+  gameid:any;
+  id: number;
 
-  constructor(private cardsService: CardsService, private router: Router) { 
+  constructor(private cardsService: CardsService, private router: Router, private route : ActivatedRoute) { 
      
     }
 
   ngOnInit() {
+
+    this.gameid = this.route.snapshot.params.id;
    
-    this.cardsService.getPlayersdash(this.cardsService.gameid).subscribe(
+    // get the set of cards of all the players
+    this.cardsService.getPlayersdash(this.gameid).subscribe(
       list => {
           this.round2Array = list.map(item => {
             return {
@@ -32,11 +38,25 @@ export class DashboardComponent implements OnInit {
         }); 
 
       this.getGame();
-
+      this.getCard();
   } 
 
+   // get the cards content
+  getCard() {
+    this.cardsService.getcard(this.cardsService.gameid).subscribe(
+      list => {
+        this.cardsArray = list.map(item => {
+          return {
+            $key: item.key,
+            ...item.payload.val()
+          };
+        });
+      });
+  }
+
+  // get the game project name
   getGame(){
-    this.cardsService.getGame(this.cardsService.gameid).subscribe(
+    this.cardsService.getGame(this.gameid).subscribe(
       list => {
         this.nameArray = list.map(item => {
           return {

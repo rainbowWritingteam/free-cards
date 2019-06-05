@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<!------ Include the above in your HEAD tag ---------->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<body>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<div class="wrapper fadeInDown">
+
+  <div id="formContent">
+    <!-- Tabs Titles -->
+  <div *ngFor="let game of nameArray;">
+    <label style="color:#F1C40F;font-size:100%;margin-right: 70%;margin-top: 10%;font-family: Arial, Helvetica, sans-serif">{{game.gameid}}</label>
+  </div>
+    <!-- Icon -->
+    <div class="fadeIn first">
+
+    </div>
+
+    <!-- Cards creation  Form -->
+    <form   ngNativeValidate>
+      <h4 style="font-weight: bold;">Enter your 7 playing cards </h4><br>
+      <input type="text"  class="fadeIn second" name="name" [(ngModel)]="name" placeholder=" card title"  value="Reset" required>
+      <input type="submit" class="fadeIn fourth"  value="OK"  (click)="Onsubmit()">
+    </form>
+
+</div>
+
+
+
+<!-- Displaying the cards titles created -->
+<div class="cardList">
+  <div *ngFor="let card of writingArray"> 
+      <input type="text"  value="{{card.name}}" >
+  </div>
+</div>
+
+<div style="position: absolute;bottom: 0;">
+   <input type="submit" class="fadeIn fourth" value="Let's start"  [routerLink]="['/round1']" >
+</div>
+
+</div>
+</body></html>

@@ -50,6 +50,8 @@ export class GameComponent implements OnInit {
     let gameId ={
       gameid:this.gameid
     }
+
+    // Join the game
     this.cardsService.getId(this.gameid).subscribe(
       list => {
 

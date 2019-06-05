@@ -1,8 +1,10 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
 
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<body>
 
 <div class="wrapper fadeInDown">
   <div id="formContent">
@@ -10,36 +12,35 @@
 
     <!-- Icon -->
     <div class="fadeIn first">
-      <img src="../../assets/images/newlogo.PNG" id="icon" alt="User Icon" />
+      <img src="../../assets/images/Logo_rainbowwritingtif.jpg" id="icon" alt="User Icon" />
     </div>
 
-    <!-- Game Form -->
+    <!-- Join Game Form  for player-->
     <form  (submit)="Onsubmit()"   ngNativeValidate>
-      <h4>Enter your project name</h4>
+      <h3>Create your Persona name</h3>
       <input type="text" id="gameid" class="fadeIn second" name="gameid"  [(ngModel)]="gameid" placeholder=" project name" required>
-      <input type="submit" class="fadeIn fourth" value="Join "  [routerLink]="['/game']" (click)="Onsubmit()" >
+      <input type="submit" class="fadeIn fourth" value="Join "  [routerLink]="['/name']" (click)="Onsubmit()" >
         </form>
  
  
- <a href="#guide" ><h6 style="color:rgb(0, 0, 0);">play guide here</h6></a>
+ <a href="#guide" ><h4 style="color:rgb(0, 0, 0);">play guide here</h4></a>
+
+ <!-- Playing guide -->
 
  <div id="guide" class="overlay">
 	<div class="popup"><br />
     <a class="close" href="#">×</a><br>
-    <h4 style="color:rgb(255, 255, 255);">Be ready to play ! </h4>
+    <h3 style="color:rgb(255, 255, 255);">Be ready to play ! </h3>
     <ol>
-      <li>Create your game name to join with other players.</li>
-      <li>The game should have at least two players .</li>
+      <li>Join your Persona game with other players.</li>
+      <li>The Persona game should have at least two players .</li>
       <li>Wait for all the players to join to start the game.</li>
-      <li>Make sure to fill out the each card  whithin the time limit.</li>
-      <li>You have exactly 7 words to express you idea in each card.</li>
-
+      <li>Once the gapme starts you will have the playing cards.</li>
+      <li>You have 60 seconds to fill out each card.</li>
+      
     </ol>
 <br>
-
-
-    
-	</div>
+</div>
 </div>
 
 
@@ -52,3 +53,7 @@
 
 
 </div>
+<h4 style="color:white;text-align:center"><a href="http://imagine.hanyang.ac.kr/" style="color:white">ImagineXlab</a> - All rights reserved</h4>
+
+</body>
+</html>

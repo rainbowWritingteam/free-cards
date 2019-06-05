@@ -1,82 +1,51 @@
-<!DOCTYPE html>
-<html lang="en" ng-app="myApp">
- 
-<head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-</head>
- 
-<body>
-    <style>
-        .cardList {
-          display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-   justify-content: flex-start;
- }
- /* Column Gap */
- .cardList > * {
-   box-sizing: border-box;
- }
- .cardList > *:not(:last-child) {
-   margin-right: 32px;
- }
- /* Item sizing */
- .cardListItem {
-   flex: 0 1 calc(33.3% - 32px);
- }
-      </style>
- 
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-     
-        <div >
-      
-             
-                <p className="par" >
-                          Set your playing cards                 
-                </p>
-                <form class="form-inline" (submit)="onAddsubmit()"   ngNativeValidate>
-                        <div class="form-group mx-sm-3 mb-2">
-                          <label for="inputPassword2" class="sr-only">Game Id</label>
-                          <input type="text" class="form-control" [(ngModel)]="card" name=" card" placeholder="Card name.." required>
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+ <div class="space-medium">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
+                    <div class="feature-block-v7 feature-block">
+                        <div class="feature-icon text-brand bg-brand-light mb-5">
+                            <i class="fas fa-gamepad"></i>
                         </div>
-                        <input type="submit" value="Add" class="btn btn-danger mb-2">
-                 </form>
-
-                 <div class="cardList">
-             <div *ngFor="let card of cardsArray; let i = index">
-                      <div  *ngIf="i  === 2">
-              
-                <div class="card border-danger mb-3" >
-                  <div class="card-header" ><h3>{{i}}.{{card.card}}</h3> </div>
-                  <div class="card-body">
-                    <h5 class="card-title">         </h5>
-                  </div>
-                  <div class="card-footer bg-transparent border-danger">Rainbow writing  </div>
+                        <div class="feature-content">
+                            <h2>Rainbow Writing</h2>
+                            <p class="lead">Rainbow writing is a team game for a brainstorming session.
+                              In this group game,efforts are made to find a conclusion for a specific problem by gathering a list of ideas spontaneously contributed by its members.
+                              Complete your rainbow writing and save your link to see the cards and access it anytime . </p>
+                            <hr class="m-t-30 m-b-30"><h3  style="color:#F1C40F ! important;">How it works ?</h3>
+                            <ul>
+                              <li>Create a game name to join with other players.</li>
+                              <li>Wait for the other players to join to start the game.</li>
+                              <li>You will have 7 brainstorming card : <br>
+                                Functionality<br>
+                                Application<br>
+                                Technology industry<br>
+                                Weakness<br>
+                                Customer<br>
+                                Needs<br>
+                                Trends & Issues</li>
+                                <li>Each player need to fill out the card by playing order.</li>
+                                <li>When the game is completed, save your rainbow writing cards Link ^^</li>
+                            </ul>
+                            <a href="https://rainbow-writing-30bbb.firebaseapp.com" class="btn btn-rounded btn-outline-primary">Play now !</a>
+                        </div>
+                    </div>
                 </div>
-                
-            
-              </div>
-              </div>
-              </div>
-
-
-   <div style="padding-left: 1150px;">
-    <a [routerLink]="['/cards']"   class="btn btn-danger mb-2" > Next </a>
-  </div>
-
-
-              </div>
-        
- 
- 
-</body></html>
-
-
-
-
-
-
-
+                <div class="offset-xl-1 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div class="circle-1"></div>
+                    <div class="feature-app-img">
+                        <img src="../../assets/images/iphone-landing.png" alt="App Landing Page Template - Quanto">
+                    </div>
+                </div>
+            </div>
+             <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center mt-4"> 
+            <a href="https://imagine.hanyang.ac.kr" target="_blank" class="text-primary">ImagineXLab</a><p> 2019 All rights reserved</p>
+              </div></div>
+        </div>
+    </div>

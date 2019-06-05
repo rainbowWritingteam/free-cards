@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "rainbow-writing"
+    "default": "rainbow-writing",
+    "rainbow": "rainbow-writing-30bbb",
+    " ": "rainbow-cards"
   }
 }

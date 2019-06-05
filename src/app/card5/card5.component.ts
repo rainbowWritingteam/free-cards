@@ -15,6 +15,7 @@ export class Card5Component implements OnInit {
   round2Array =[];
   nameArray = [];
   playerArray=[];
+  cardsArray=[];
   id:any;
 
   ngOnInit() {
@@ -34,6 +35,7 @@ export class Card5Component implements OnInit {
 
       this.getContent();
       this.getPlayername();
+      this.getCard();
     }
   
   
@@ -48,11 +50,22 @@ export class Card5Component implements OnInit {
             };
           });
         });
-  
-  
-  
     }
   
+    getCard() {
+
+      this.cardsService.getcard(this.cardsService.gameid).subscribe(
+        list => {
+          this.cardsArray = list.map(item => {
+            return {
+              $key: item.key,
+              ...item.payload.val()
+            };
+          });
+        });
+    }
+
+
 
   getContent(){
 

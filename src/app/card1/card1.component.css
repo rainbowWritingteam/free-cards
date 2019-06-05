@@ -1,30 +1,51 @@
-#top {
+
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
+
+.top {
   
-   left: 15%;
+   left: 5%;
    position: absolute;
+  top:0%;
 
   
  }
+  
+  .wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+  }
+  
+
+ body {
+  height: 100vh;
+}
+
 
  .title {
     color: #ECF0F1;
     font-size: 2.5vh;
     font-weight: 200;
-    font-family: 'Merriweather', serif;
-    text-transform: uppercase;
+    font-family: sans-serif !important;
     text-align: justify;
     background-color: rgb(219, 30, 30);
     padding: 5px 5px 5px 10px;
+    margin-bottom: 0%;
    
  }
 
 
 #menu {
     position: absolute;
-    background-color: #ECF0F1;
     display: flex;
     flex-direction: column;
-    top: 50%;
+    top: 40%;
     left: 50%;
     /* note: the translateZ(0) enables hardware accel */
     /* without it, there is a weird gap between panels */
@@ -33,21 +54,28 @@
     width: 46.33333vh;
     overflow: hidden;
     padding: 0%  !important;
+    margin-top: 20px;
   }
 
  textarea{
    position: relative;
    width: 46.33333vh;
+   height: 50vh;
    border: none;
+   background-color: #ECF0F1;
+   border-bottom-width: 10px
+
  }
 
  label{
-    margin-top: 2.5vh;
-    margin-right: 3px;
-    font-size: 3.5vh;
-    line-height: 5vh;
-    font-weight: 200;
-    font-family: 'Merriweather', serif;
+  left: 2vh;
+  top: 60%;
+  margin-top: 2.5vh;
+  font-size: 3.5vh;
+  line-height: 5vh;
+  font-weight: 300;
+  margin-left: 10px;
+  color: #eee;
   }
 
 
@@ -65,13 +93,14 @@
    text-align: center;
    text-decoration: none;
    display: inline-block;
-   font-family: 'Roboto Slab', serif;
+   font-family: sans-serif !important;
    font-size: 18px;
    -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
    box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
    -webkit-border-radius: 5px 5px 5px 5px;
    border-radius: 5px 5px 5px 5px;
    margin: 5px 10px 20px 20px;
+   margin-left: 0%;
    -webkit-transition: all 0.3s ease-in-out;
    -moz-transition: all 0.3s ease-in-out;
    -ms-transition: all 0.3s ease-in-out;
@@ -79,7 +108,6 @@
    transition: all 0.3s ease-in-out;
    position: absolute;
    top: 75%;
-  left: 39.4%;
   cursor : pointer;
  }
   
@@ -100,8 +128,15 @@
  
 }
 
+.countdown {
+  color: rgb(219, 30, 30);
+  font-size: 9vh;
+}
+
+
 .round {
-  left: 75%;
-  top: 12%;
+  left: 72%;
+  top: 0%;
   position: absolute;
+  font-family: sans-serif !important;
 }
