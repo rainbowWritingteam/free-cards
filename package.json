@@ -29,7 +29,7 @@
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.4",
     "firebase": "^5.7.2",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "ng2-carouselamos": "^3.2.0",
     "ng2-opd-popup": "^1.1.21",
     "ngx-countdown": "^3.1.0",
